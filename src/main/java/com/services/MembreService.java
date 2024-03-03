@@ -12,7 +12,7 @@ public interface MembreService {
     MembreDto saveMembre(MembreDto membreDto);
 
     /**
-     * Update a dog
+     * Update a membre
      */
     MembreDto updateMembre(Long membreId, MembreDto membreDto);
 

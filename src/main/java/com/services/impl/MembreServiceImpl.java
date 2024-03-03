@@ -26,6 +26,12 @@ public class MembreServiceImpl implements MembreService {
      */
     @Override
     public MembreDto saveMembre(MembreDto membreDto) {
+
+        // Deux membres ne  peuvent pas avoir le même nom et prenom
+        if (membreRepository.CheckName(membreDto.getNom(), membreDto.getPrenom())) {
+            throw new IllegalStateException("Un membre avec le même nom et prénom existe déjà !");
+        }
+
         // Converts the dto to the membre entity
         Membre membre = membreDtoToEntity(membreDto);
         // Save the membre entity

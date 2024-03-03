@@ -28,6 +28,7 @@ public class MembreControllers {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Une liste des membres")
     })
+    @CrossOrigin
     @GetMapping
     public List<MembreDto> getMembres() {
         return membreService.getAllMembres();
@@ -40,6 +41,7 @@ public class MembreControllers {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Un membre détaillé")
     })
+    @CrossOrigin
     @GetMapping("/{membreId}")
     public MembreDto getMembre(@PathVariable @NonNull Long membreId){
         return membreService.getMembreById(membreId);
@@ -52,6 +54,7 @@ public class MembreControllers {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Nouveau membre créé")
     })
+    @CrossOrigin
     @PostMapping
     public MembreDto saveMembre(final @RequestBody @NonNull MembreDto membreDto){
         return membreService.saveMembre(membreDto);
@@ -64,6 +67,7 @@ public class MembreControllers {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Membre mis à jour")
     })
+    @CrossOrigin
     @PutMapping("/{membreId}")
     public MembreDto updateMembre(@PathVariable @NonNull Long membreId, final @RequestBody @NonNull MembreDto membreDto){
         return membreService.updateMembre(membreId, membreDto);
@@ -76,6 +80,7 @@ public class MembreControllers {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Membre supprimé")
     })
+    @CrossOrigin
     @DeleteMapping("/{membreId}")
     public Boolean deleteMembre(@PathVariable @NonNull Long membreId){
         return membreService.deleteMembre(membreId);
