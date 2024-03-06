@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "042a8edf-ec30-4a66-98ac-08be1ef71985",
+		"name": "membreapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25505596"
+	},
+	"item": [
+		{
+			"name": "membres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/membres",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"membres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "membres/{membreId}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/membres/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"membres",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "membres",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\": \"Nara\",\r\n    \"prenom\": \"Akira\",\r\n    \"adresse\": \"10 Rue Pasteur\",\r\n    \"mail\": \"akir@gmail.com\",\r\n    \"motDePasse\": \"aki\",\r\n    \"dateNaissance\": \"1995-04-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/membres",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"membres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "membres/{membreId]",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\": \"Hakim\",\r\n    \"prenom\": \"Ben\",\r\n    \"adresse\": \"10 Rue Louis Pasteur\",\r\n    \"mail\": \"akir@gmail.com\",\r\n    \"motDePasse\": \"aki\",\r\n    \"dateNaissance\": \"1997-04-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/membres/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"membres",
+						"5"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "membres/{membreId}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/membres/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"membres",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
